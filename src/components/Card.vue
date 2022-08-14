@@ -23,12 +23,12 @@ export default {
   },
   mounted(){
       this.desc= this.post.description
-      this.date=this.post.date.split("T")[0]
+      this.date=this.post.created_at.split("T")[0]
   },
   methods:{
     getImgUrl(topic){
       const img=topic.toLowerCase()
-      console.log(`../assets/img/${img}.png`);
+      // console.log(`../assets/img/${img}.png`);
       try{
         return require(`../assets/img/${img}.png`)
 
